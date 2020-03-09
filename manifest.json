@@ -1,0 +1,40 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 2,
+    "name": "FreshPortlet — NetSuite Portlet Refresher",
+    "description": "Refreshes your NetSuite portlets automatically at the interval of your choosing, without reloading the whole tab.",
+    "version": "1.5.4",
+    "content_scripts": [
+    {
+        "matches": [
+            "*://*.app.netsuite.com/app/center/*"
+        ],
+        "js": [
+            "jquery-3.2.1.min.js",
+            "content.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "*://*.app.netsuite.com/app/center/*"
+    ],
+    "browser_action":  {
+        "default_title": "FreshPortlet for NetSuite",
+        "default_icon": "FreshPortlet.png",
+        "default_popup": "NetsuiteRefresher.html"
+    },
+    "background":
+    {
+        "scripts": [
+        "background.js",
+        "jquery-3.2.1.min.js"
+    ]
+    },
+    "icons":
+    {
+        "128": "FreshPortlet.png"
+    }
+}

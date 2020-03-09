@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>FreshPortlet for NetSuite</title>
+	<script src="penguin.js"></script>          
+  </head>
+  <body background="leaf.jpg">   
+	<div align="center" style="padding: 20px 20px 20px 20px;width: 227px;"> 
+		<img src=FreshPortlet.png height="60" width="60">
+		<h2>FreshPortlet for NetSuite</h2>
+		<p>Your homepage NetSuite portlets will be refreshed automatically at the interval you set below.</p>
+		<hr>
+		<h3>Enter an interval here:</h3>
+		<div align="left" style="padding: 0px 0px 0px 60px">
+			<input type="text" style="text-align:center;display:inline;background-color: rgba(0,0,0,0)" id="userInputHours" size="5"/>
+			<h3 style="display:inline">  hour(s)</h3>
+			<br>
+			<input type="text" style="text-align:center;display:inline;background-color: rgba(0,0,0,0)" id="userInputMinutes" size="5"/>
+			<h3 style="display:inline"> minute(s)</h3>
+			<br>
+			<input type="text" style="text-align:center;display:inline;background-color: rgba(0,0,0,0)" id="userInputSeconds" size="5"/>
+			<h3 style="display:inline"> second(s)</h3>
+		</div>
+		<br>
+		<button type="submit" style="display:inline" id="okbutton">Start</button>
+		<button type="submit" style="display:inline" id="deactivate">Stop</button>
+		<br>
+		<h3 id="errors" style="color:red;"></h3>
+		<h3 id="durationprobs" style="color:red;"></h3>
+		<h3 id="currentint" style="color:green;">Running with interval:<br>1 minute</h3>
+		<input type="checkbox" id="printtimestamp" value="printTimestamp" checked><h3 style="display:inline;"> Display refresh status in NetSuite</h3>
+		<hr>       
+		<a style="display:inline" href="mailto:campbell@galon.dev?body=Hi%20Campbell,%0A%0AHere%20is%20my%20feedback:%0A(Enter%20comments%20here)&subject=Feedback%20on%20your%20%22FreshPortlet%20for%20NetSuite%22%20Chrome%20extension">Send feedback to developer</a>
+    </div>      
+  </body>
+</html>
